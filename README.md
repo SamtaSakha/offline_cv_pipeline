@@ -75,6 +75,35 @@ result = pipeline.identify("live_capture.jpg")
 print(result.to_json())
 ```
 
+## Interactive Web UI (Streamlit)
+
+You can launch a visual, interactive dashboard to test probes against your gallery. The UI uses a clean, two-column layout to show the uploaded image alongside the real-time identity analysis matching the strict JSON contract.
+
+```bash
+# Ensure streamlit is installed
+pip install streamlit
+
+# Launch the visual dashboard
+PYTHONPATH=src python3 -m streamlit run scripts/streamlit_app.py
+```
+
+**Visual Representation:**
+```text
+┌──────────────────────────────┐
+│     BHIV Face Recognition    │
+├──────────────────────────────┤
+│                              │
+│       [ Upload Image ]       │
+│                              │
+│       Face Detected ✓        │
+│                              │
+│ Identity: candidate_001      │
+│ Similarity: 0.91             │
+│ Confidence: 0.94             │
+│ Status: Known                │
+└──────────────────────────────┘
+```
+
 ## Documentation map
 
 | File | Day | Contents |
