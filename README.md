@@ -88,21 +88,10 @@ PYTHONPATH=src python3 -m streamlit run scripts/streamlit_app.py
 ```
 
 **Visual Representation:**
-```text
-┌──────────────────────────────┐
-│     BHIV Face Recognition    │
-├──────────────────────────────┤
-│                              │
-│       [ Upload Image ]       │
-│                              │
-│       Face Detected ✓        │
-│                              │
-│ Identity: candidate_001      │
-│ Similarity: 0.91             │
-│ Confidence: 0.94             │
-│ Status: Known                │
-└──────────────────────────────┘
-```
+
+![BHIV Face Recognition UI Banner](docs/ui_banner.png)
+
+![BHIV Face Recognition Analysis Results](docs/ui_results.png)
 
 ## Documentation map
 
