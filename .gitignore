@@ -1,0 +1,42 @@
+# Virtual Environments
+.venv/
+venv/
+env/
+.env/
+
+# Secrets and Configuration
+.env
+.env.local
+.env.*
+*.pem
+*.key
+credentials.json
+client_secret.json
+secrets.yml
+
+# Python Artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Logs and Databases
+*.log
+*.sqlite3
+*.db
+
+# Auto-generated Data
+/bhiv-cv/data/gallery/*
+!/bhiv-cv/data/gallery/.gitkeep
+/bhiv-cv/data/probes/*
+!/bhiv-cv/data/probes/.gitkeep
+
+# IDEs and OS Files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

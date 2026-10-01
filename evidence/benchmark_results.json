@@ -1,0 +1,57 @@
+{
+  "environment": {
+    "python": "3.12.3",
+    "cpu_count": 1,
+    "note": "Single-CPU sandboxed container, no GPU, no network access. Numbers characterize the algorithm's relative behavior, not an absolute production-hardware SLA."
+  },
+  "model_size": {
+    "external_pretrained_weights_mb": 0.0,
+    "pipeline_source_code_kb": 22.3,
+    "note": "LBP is a fixed mathematical transform, not a trained model with weight files, so there is no weight-file size to report. Cost per enrolled identity below is the real memory driver."
+  },
+  "startup_time_ms": 12.531,
+  "per_identity_storage_cost": {
+    "embedding_dimensions": 640,
+    "bytes_per_enrolled_template": 5120,
+    "kb_per_1000_identities": 5000.0
+  },
+  "cold_inference_ms": 156.226,
+  "warm_inference": {
+    "n_runs": 60,
+    "mean_ms": 156.515,
+    "median_ms": 155.913,
+    "p95_ms": 160.905,
+    "min_ms": 154.628,
+    "max_ms": 162.843
+  },
+  "stage_breakdown": [
+    {
+      "stage": "detection",
+      "mean_ms": 141.069,
+      "p95_ms": 143.384
+    },
+    {
+      "stage": "preprocessing",
+      "mean_ms": 0.155,
+      "p95_ms": 0.178
+    },
+    {
+      "stage": "representation",
+      "mean_ms": 10.1,
+      "p95_ms": 10.393
+    },
+    {
+      "stage": "matching",
+      "mean_ms": 0.048,
+      "p95_ms": 0.054
+    }
+  ],
+  "resource_usage": {
+    "rss_before_mb": 117.7,
+    "rss_after_mb": 117.7,
+    "rss_delta_mb_over_60_runs": 0.0,
+    "cpu_seconds_for_60_identify_calls": 9.37,
+    "avg_cpu_ms_per_identify_call": 156.167,
+    "logical_cpu_count_on_this_host": 1
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "baseline_512x512": {
+    "mean_ms": 139.494,
+    "p95_ms": 141.202,
+    "still_detects_face": true
+  },
+  "opt1_resized_256x256": {
+    "mean_ms": 33.615,
+    "p95_ms": 33.94,
+    "still_detects_face": true
+  },
+  "opt1_resized_128x128": {
+    "mean_ms": 4.505,
+    "p95_ms": 4.685,
+    "still_detects_face": false
+  },
+  "opt2_scaleFactor_1.2": {
+    "mean_ms": 67.882,
+    "p95_ms": 70.604,
+    "still_detects_face": true
+  },
+  "opt2_scaleFactor_1.3_minN_3": {
+    "mean_ms": 47.411,
+    "p95_ms": 47.954,
+    "still_detects_face": true
+  },
+  "opt_combined_resize+coarse_scan": {
+    "mean_ms": 17.137,
+    "p95_ms": 17.495,
+    "still_detects_face": true
+  }
+}

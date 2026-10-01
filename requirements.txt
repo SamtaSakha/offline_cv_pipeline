@@ -1,0 +1,11 @@
+opencv-contrib-python>=4.8
+numpy>=1.24
+scikit-image>=0.21
+pytest>=7.4
+psutil>=5.9
+
+# Optional, future deep-embedding backend (see src/bhiv_cv/representation.py
+# TorchEmbedder). Not required to run anything in this repo today.
+# torch
+# torchvision
+# facenet-pytorch

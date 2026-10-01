@@ -1,0 +1,60 @@
+test_detector_scores_are_bounded_0_1 (tests.test_detection.TestDetection.test_detector_scores_are_bounded_0_1) ... ok
+test_detects_face_in_clean_probe (tests.test_detection.TestDetection.test_detects_face_in_clean_probe) ... ok
+test_detects_two_faces_in_multi_face_frame (tests.test_detection.TestDetection.test_detects_two_faces_in_multi_face_frame) ... ok
+test_no_face_on_blank_frame (tests.test_detection.TestDetection.test_no_face_on_blank_frame) ... ok
+test_resource_limit_error_on_oversized_image (tests.test_detection.TestDetection.test_resource_limit_error_on_oversized_image) ... ok
+test_close_but_distinct_identities_reduce_confidence (tests.test_matching.TestMatching.test_close_but_distinct_identities_reduce_confidence)
+Two near-identical gallery templates for DIFFERENT identities ... ok
+test_empty_gallery_raises (tests.test_matching.TestMatching.test_empty_gallery_raises) ... ok
+test_gallery_allows_update_when_explicitly_requested (tests.test_matching.TestMatching.test_gallery_allows_update_when_explicitly_requested) ... ok
+test_gallery_rejects_duplicate_identity_by_default (tests.test_matching.TestMatching.test_gallery_rejects_duplicate_identity_by_default) ... ok
+test_gallery_save_and_load_roundtrip (tests.test_matching.TestMatching.test_gallery_save_and_load_roundtrip) ... ok
+test_identical_embedding_matches_with_high_similarity (tests.test_matching.TestMatching.test_identical_embedding_matches_with_high_similarity) ... ok
+test_very_different_embedding_is_unknown (tests.test_matching.TestMatching.test_very_different_embedding_is_unknown) ... ok
+test_blurred_probe_never_silently_authorizes (tests.test_pipeline_failures.TestPipelineFailures.test_blurred_probe_never_silently_authorizes) ... ok
+test_corrupt_image_is_a_typed_error_not_a_crash (tests.test_pipeline_failures.TestPipelineFailures.test_corrupt_image_is_a_typed_error_not_a_crash) ... identify() failed: UnsupportedInputError: Input could not be decoded as an image.
+ok
+test_duplicate_gallery_enrollment_is_rejected_by_default (tests.test_pipeline_failures.TestPipelineFailures.test_duplicate_gallery_enrollment_is_rejected_by_default) ... enroll() failed: DuplicateIdentityError: Identity 'candidate_001' is already enrolled.
+ok
+test_empty_gallery_is_a_typed_error_not_a_crash (tests.test_pipeline_failures.TestPipelineFailures.test_empty_gallery_is_a_typed_error_not_a_crash) ... identify() failed: EmptyGalleryError: Matching requested against an empty gallery.
+ok
+test_low_confidence_never_becomes_a_match_even_with_lenient_thresholds (tests.test_pipeline_failures.TestPipelineFailures.test_low_confidence_never_becomes_a_match_even_with_lenient_thresholds)
+Regression guard for the single most important rule in the brief: ... identify() failed: NoFaceDetectedError: No face found in probe image.
+ok
+test_missing_model_backend_is_a_typed_error (tests.test_pipeline_failures.TestPipelineFailures.test_missing_model_backend_is_a_typed_error) ... enroll() failed: NoFaceDetectedError: No face found during enrollment.
+ok
+test_multiple_faces_allowed_picks_largest_when_permitted (tests.test_pipeline_failures.TestPipelineFailures.test_multiple_faces_allowed_picks_largest_when_permitted) ... ok
+test_multiple_faces_rejected_when_single_face_required (tests.test_pipeline_failures.TestPipelineFailures.test_multiple_faces_rejected_when_single_face_required) ... identify() failed: MultipleFacesDetectedError: Expected exactly 1 face, found 2.
+ok
+test_no_face (tests.test_pipeline_failures.TestPipelineFailures.test_no_face) ... identify() failed: NoFaceDetectedError: No face found in probe image.
+ok
+test_nonexistent_path_is_a_typed_error (tests.test_pipeline_failures.TestPipelineFailures.test_nonexistent_path_is_a_typed_error) ... identify() failed: UnsupportedInputError: No such file: /home/claude/bhiv-cv/data/probes/does_not_exist.png
+ok
+test_partial_face_probe_never_silently_authorizes (tests.test_pipeline_failures.TestPipelineFailures.test_partial_face_probe_never_silently_authorizes) ... identify() failed: NoFaceDetectedError: No face found in probe image.
+ok
+test_poor_lighting_probe_never_silently_authorizes (tests.test_pipeline_failures.TestPipelineFailures.test_poor_lighting_probe_never_silently_authorizes) ... identify() failed: MultipleFacesDetectedError: Expected exactly 1 face, found 2.
+ok
+test_poor_quality_probe_never_silently_authorizes (tests.test_pipeline_failures.TestPipelineFailures.test_poor_quality_probe_never_silently_authorizes) ... identify() failed: NoFaceDetectedError: No face found in probe image.
+ok
+test_resource_limit_guard_on_oversized_input (tests.test_pipeline_failures.TestPipelineFailures.test_resource_limit_guard_on_oversized_input) ... identify() failed: ResourceLimitError: Image is 2.2 MP, exceeds configured ceiling of 0.001 MP.
+ok
+test_side_angle_probe_never_silently_authorizes (tests.test_pipeline_failures.TestPipelineFailures.test_side_angle_probe_never_silently_authorizes) ... identify() failed: NoFaceDetectedError: No face found in probe image.
+ok
+test_unknown_person_is_reported_as_unknown_not_error (tests.test_pipeline_failures.TestPipelineFailures.test_unknown_person_is_reported_as_unknown_not_error)
+Enroll ONLY candidate_002, then probe with candidate_001's face. ... ok
+test_unsupported_input_type_is_a_typed_error (tests.test_pipeline_failures.TestPipelineFailures.test_unsupported_input_type_is_a_typed_error) ... identify() failed: UnsupportedInputError: Unsupported input type: <class 'int'>
+ok
+test_crop_stays_within_image_bounds_near_edges (tests.test_preprocessing.TestPreprocessing.test_crop_stays_within_image_bounds_near_edges)
+A box whose margin would extend outside the frame must be ... ok
+test_default_target_size (tests.test_preprocessing.TestPreprocessing.test_default_target_size) ... ok
+test_output_shape_matches_config (tests.test_preprocessing.TestPreprocessing.test_output_shape_matches_config) ... ok
+test_different_faces_give_different_embeddings (tests.test_representation.TestRepresentation.test_different_faces_give_different_embeddings) ... ok
+test_embedding_has_expected_dimension (tests.test_representation.TestRepresentation.test_embedding_has_expected_dimension) ... ok
+test_embedding_is_deterministic (tests.test_representation.TestRepresentation.test_embedding_is_deterministic) ... ok
+test_embedding_rejects_empty_input (tests.test_representation.TestRepresentation.test_embedding_rejects_empty_input) ... ok
+test_torch_embedder_stub_raises_model_not_loaded (tests.test_representation.TestRepresentation.test_torch_embedder_stub_raises_model_not_loaded) ... ok
+
+----------------------------------------------------------------------
+Ran 37 tests in 8.005s
+
+OK
