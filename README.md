@@ -91,7 +91,7 @@ PYTHONPATH=src python3 -m streamlit run scripts/streamlit_app.py
 
 ![BHIV Face Recognition UI Banner](Screenshot%202026-10-02%20011029.png)
 
-![BHIV Face Recognition Analysis Results](Screenshot 2026-10-02 011106.png)
+![BHIV Face Recognition Analysis Results](Screenshot%202026-10-02%20011106.png)
 
 ## Documentation map
 
