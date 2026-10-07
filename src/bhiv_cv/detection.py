@@ -39,7 +39,10 @@ class FaceDetector:
 
     def __init__(self, config: DetectionConfig = None):
         self.config = config or DetectionConfig()
-        cascade_path = cv2.data.haarcascades + self.config.cascade_name
+        import os
+        # project root is 3 levels up from this file (src/bhiv_cv/detection.py)
+        base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+        cascade_path = os.path.join(base_dir, "data", "models", self.config.cascade_name)
         self._cascade = cv2.CascadeClassifier(cascade_path)
         if self._cascade.empty():
             raise RuntimeError(f"Failed to load cascade at {cascade_path}")

@@ -40,12 +40,3 @@ Camera / Image  →  Detection  →  Preprocessing  →  Representation
 | Persisting access events, audit trail | **HIAS Truth/Event Layer** (not built this sprint) |
 | Physical actuation (doors, gates) | **Outside both** — a downstream consumer of HIAS's decision |
 
-## Why this matters for Day 6/7
-
-Because there is no existing HIAS code to integrate against, "integration"
-in this sprint means: **produce a contract-clean module whose only output is
-the JSON object in `INTEGRATION.md`, with no code path that could be mistaken
-for an access decision.** That is verified directly in
-`tests/test_pipeline_failures.py` (37/37 passing — see `evidence/test_results_raw.txt`)
-and in `src/bhiv_cv/contracts.py`, where the `IdentityResult` schema has no
-field capable of expressing "access granted."

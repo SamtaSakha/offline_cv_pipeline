@@ -3,29 +3,28 @@
 ## ⚠️ Read this section first — how this packet was produced
 
 This entire repository — code, tests, benchmarks, and documentation — was
-built in one sitting with Claude (an AI assistant) at Samta's direction, in
+built in one sitting with Claude (an AI assistant) at my direction, in
 a sandboxed environment with no internet access. That is disclosed here in
 full, per the brief's own explicit requirement: *"every AI-generated result
 must be understood and verified by him"* and the REVIEW_PACKET must state
 *"what AI generated, what he personally verified/changed."*
 
-**What this means practically: the sections below marked `[SAMTA TO
-COMPLETE]` are not yet filled in, and this packet is not honestly submittable
-until they are.** The evaluation is explicitly of Samta's understanding, not
+**What this means practically: the sections below marked  are not yet filled in, and this packet is not honestly submittable
+until they are.** The evaluation is explicitly of my understanding, not
 of whether a working repository exists. A complete-looking repo with an
 unverified REVIEW_PACKET fails the actual test.
 
-Before submitting, Samta should, at minimum:
+Before submitting, I should, at minimum:
 1. Read every file in `src/bhiv_cv/` and every doc in `docs/` end to end.
-2. Re-run the full rebuild sequence himself (below) on his own machine and
+2. Re-run the full rebuild sequence myself (below) on my own machine and
    confirm the numbers match (or note and explain any divergence).
 3. Be able to explain, without reading from these files, why LBP was chosen
    over a deep embedding model, what the integration boundary is and why it
    is shaped that way, and what each of the 15 failure rows in
    `FAILURE_TESTS.md` means.
 4. Record the 5–10 minute technical walkthrough required by Day 7.
-5. Fill in every `[SAMTA TO COMPLETE]` section below honestly, including
-   anywhere he disagrees with a decision this packet made.
+5. Fill in every section below honestly, including
+   anywhere I disagrees with a decision this packet made.
 
 ## Objective (as given)
 
@@ -61,9 +60,9 @@ Everything currently in this repository: all source files under `src/`,
 all tests under `tests/`, all scripts under `scripts/`, all documentation
 under `docs/`, and all evidence files under `evidence/`.
 
-## What Samta personally verified/changed
+## personally verified/changed
 
-`[SAMTA TO COMPLETE — be specific. Examples of the kind of entry expected
+`[be specific. Examples of the kind of entry expected
 here: "Re-ran scripts/benchmark.py on my own machine, got X ms instead of
 158ms because of Y hardware difference"; "Disagreed with the
 similarity_threshold default of 0.55, changed it to Z because..."; "Traced
@@ -124,8 +123,7 @@ positive result.
 - Resource-limit testing used a configurable size ceiling rather than
   literally exhausting host memory, which is unsafe to automate reliably —
   documented as a deliberate scope limitation, not an oversight.
-- `[SAMTA TO COMPLETE — any limitation found during your own verification
-  pass that isn't listed above.]`
+- `[Any limitation found during verification pass that isn't listed above.]`
 
 ## Screenshots / runtime logs / focused code
 
@@ -157,7 +155,7 @@ access-decision field exists anywhere in this object by construction.
 
 ## Next-stage proposal (Test 2 / Test 3 direction)
 
-`[SAMTA TO COMPLETE — the brief asks specifically for what HE would
+`[The brief asks specifically for what HE would
 independently build next. A starting menu of real options this sprint's
 evidence points to, for him to choose from and justify: (a) wire up
 TorchEmbedder against a real deep embedding model once network/GPU access
